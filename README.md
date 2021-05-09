@@ -1,4 +1,4 @@
-# react
+# React-valency
 
 [![npm version][npmv-image]][npmv-url]
 [![build status][build-image]][build-url]
@@ -10,10 +10,65 @@
 ## Basic Usage
 
 ```jsx
-import React from 'react'
+import React, { useEffect } from 'react'
 import { render } from 'react-dom'
+import Valency from '@valencyhq/vanilla'
+import {
+      ValencyContext,
+      Image,
+      Object,
+      Icon,
+      useValency,
+} from '@valencyhq/react'
 
-render(, document.getElementById('root'))
+const App = () => {
+      const valent = new Valency({
+            uid: 'Your user ID',
+            project: 'Your default project ID',
+            library: 'Your default library ID',
+      })
+
+      return (
+            <ValencyContext.Provider value={valent}>
+                  {/* Your other components wrapped */}
+                  <ExampleBasicUsage />
+                  <ExampleHooksUsage />
+            </ValencyContext.Provider>
+      )
+}
+
+const ExampleBasicUsage = () => {
+      return (
+            <>
+                  <Image name="cat-dog" />
+                  <Object name="cat-dog" />
+                  <Icon library="Lib_icons" name="like" />
+            </>
+      )
+}
+
+const ExampleHooksUsage = () => {
+      const { get, asset } = useValency()
+
+      useEffect(() => {
+            console.log('Print cat-dig asset URL', get('cat-dog'))
+      })
+
+      return (
+            <>
+                  <button
+                        type="button"
+                        onClick={() => {
+                              window.open(asset['cat-dog'].url, '_blank')
+                        }}
+                  >
+                        View Asset
+                  </button>
+            </>
+      )
+}
+
+render(<App />, document.getElementById('root'))
 ```
 
 ## Live Examples
@@ -33,25 +88,23 @@ render(, document.getElementById('root'))
 **Example**
 
 ```jsx
-
 ```
 
 ## Installation
 
 ```
-$ npm install react --save
+$ npm install @valencyhq/vanilla @valencyhq/react --save
 ```
 
 There are also UMD builds available via [unpkg](https://unpkg.com/):
 
-- https://unpkg.com/react/dist/react.umd.development.js
-- https://unpkg.com/react/dist/react.umd.production.js
+- https://unpkg.com/@valencyhq/react/dist/react.umd.development.js
+- https://unpkg.com/@valencyhq/react/dist/react.umd.production.js
 
 For the non-minified development version, make sure you have already included:
 
 - [`React`](https://unpkg.com/react/umd/react.development.js)
 - [`ReactDOM`](https://unpkg.com/react-dom/umd/react-dom.development.js)
-- [`PropTypes`](https://unpkg.com/prop-types/prop-types.js)
 
 For the minified production version, make sure you have already included:
 
