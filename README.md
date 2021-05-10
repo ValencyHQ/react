@@ -14,7 +14,7 @@ Valency is a tool to manage and serve design assets.
 ## 📦 Install
 
 ```bash
-$ npm install @valencyhq/vanilla @valencyhq/react --save
+$ npm install @valencyhq/valency @valencyhq/react --save
 ```
 
 ## Table of Contents
@@ -39,7 +39,7 @@ $ npm install @valencyhq/vanilla @valencyhq/react --save
 ```jsx
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
-import Valency from '@valencyhq/vanilla'
+import Valency from '@valencyhq/valency'
 import { ValencyContext, Image, Object, Icon } from '@valencyhq/react'
 
 const valent = new Valency({
@@ -75,7 +75,7 @@ render(<App />, document.getElementById('root'))
 ```jsx
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
-import Valency from '@valencyhq/vanilla'
+import Valency from '@valencyhq/valency'
 import { ValencyContext, Image, Object, Icon } from '@valencyhq/react'
 
 const valent = new Valency({
