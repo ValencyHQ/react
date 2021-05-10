@@ -17,8 +17,7 @@
             "removeComments": true,
             "sourceMap": true,
             "strict": true,
-            "target": "es5",
-            "baseUrl": "src"
+            "target": "es5"
       },
       "exclude": ["node_modules", "dist"],
       "include": ["src"]

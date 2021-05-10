@@ -6,7 +6,6 @@
             "allowJs": true,
             "declaration": false,
             "declarationDir": null,
-            "module": "commonjs",
-            "baseUrl": "src"
+            "module": "commonjs"
       }
 }
