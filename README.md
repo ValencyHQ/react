@@ -5,34 +5,37 @@
 [![coverage status][codecov-image]][codecov-url]
 [![npm downloads][npmd-image]][npmd-url]
 
-> About
+# 🤔 What is Valency?
 
-## Basic Usage
+Valency is a tool to manage and serve design assets.
+
+- Design assets managed with Valency are served for use over a CDN.
+
+## 📦 Install
+
+```bash
+$ npm install @valencyhq/vanilla @valencyhq/react --save
+```
+
+## 🪄 Basic Usage
 
 ```jsx
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
 import Valency from '@valencyhq/vanilla'
-import {
-      ValencyContext,
-      Image,
-      Object,
-      Icon,
-      useValency,
-} from '@valencyhq/react'
+import { ValencyContext, Image, Object, Icon } from '@valencyhq/react'
+
+const valent = new Valency({
+      uid: 'Your user ID',
+      project: 'Your default project ID',
+      library: 'Your default library ID',
+})
 
 const App = () => {
-      const valent = new Valency({
-            uid: 'Your user ID',
-            project: 'Your default project ID',
-            library: 'Your default library ID',
-      })
-
       return (
             <ValencyContext.Provider value={valent}>
                   {/* Your other components wrapped */}
                   <ExampleBasicUsage />
-                  <ExampleHooksUsage />
             </ValencyContext.Provider>
       )
 }
@@ -47,36 +50,12 @@ const ExampleBasicUsage = () => {
       )
 }
 
-const ExampleHooksUsage = () => {
-      const { get, asset } = useValency()
-
-      useEffect(() => {
-            console.log('Print cat-dig asset URL', get('cat-dog'))
-      })
-
-      return (
-            <>
-                  <button
-                        type="button"
-                        onClick={() => {
-                              window.open(asset['cat-dog'].url, '_blank')
-                        }}
-                  >
-                        View Asset
-                  </button>
-            </>
-      )
-}
-
 render(<App />, document.getElementById('root'))
 ```
 
-## Live Examples
+## ▶️ Live Examples
 
-- [Basic Usage](https://codesandbox.io/)
-- [API Example](https://codesandbox.io/)
-- [UMD Build (Development)](https://codesandbox.io/)
-- [UMD Build (Production)](https://codesandbox.io/)
+- [Basic Usage](https://codesandbox.io/s/react-valency-uqrdi?file=/src/App.js)
 
 ## API
 
@@ -90,38 +69,15 @@ render(<App />, document.getElementById('root'))
 ```jsx
 ```
 
-## Installation
+## 🧾 License
 
-```
-$ npm install @valencyhq/vanilla @valencyhq/react --save
-```
-
-There are also UMD builds available via [unpkg](https://unpkg.com/):
-
-- https://unpkg.com/@valencyhq/react/dist/react.umd.development.js
-- https://unpkg.com/@valencyhq/react/dist/react.umd.production.js
-
-For the non-minified development version, make sure you have already included:
-
-- [`React`](https://unpkg.com/react/umd/react.development.js)
-- [`ReactDOM`](https://unpkg.com/react-dom/umd/react-dom.development.js)
-
-For the minified production version, make sure you have already included:
-
-- [`React`](https://unpkg.com/react/umd/react.production.min.js)
-- [`ReactDOM`](https://unpkg.com/react-dom/umd/react-dom.production.min.js)
-
-## License
-
-MIT
+Valency is licensed under the [MIT License](https://github.com/ValencyHQ/react/blob/master/LICENSE).
 
 [build-image]: https://img.shields.io/github/workflow/status/ValencyHQ/react/CI?style=flat-square
-[build-url]: https://github.com/ahkohd/react/actions?query=workflow%3ACI
-[codecov-image]: https://img.shields.io/codecov/c/github/ahkohd/react.svg?style=flat-square
+[build-url]: https://github.com/ValencyHQ/react/actions?query=workflow%3ACI
+[codecov-image]: https://img.shields.io/codecov/c/github/ValencyHQ/react.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/ValencyHQ/react
-[npmv-image]: https://img.shields.io/npm/v/react.svg?style=flat-square
+[npmv-image]: https://img.shields.io/npm/v/ValencyHQ/react.svg?style=flat-square
 [npmv-url]: https://www.npmjs.com/package/ValencyHQ/react
-[npmd-image]: https://img.shields.io/npm/dm/react.svg?style=flat-square
+[npmd-image]: https://img.shields.io/npm/dm/ValencyHQ/react.svg?style=flat-square
 [npmd-url]: https://www.npmjs.com/package/ValencyHQ/react
-
-¡
