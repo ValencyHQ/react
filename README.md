@@ -115,11 +115,13 @@ For the minified production version, make sure you have already included:
 
 MIT
 
-[build-image]: https://img.shields.io/github/workflow/status/ahkohd/react/CI?style=flat-square
+[build-image]: https://img.shields.io/github/workflow/status/ValencyHQ/react/CI?style=flat-square
 [build-url]: https://github.com/ahkohd/react/actions?query=workflow%3ACI
 [codecov-image]: https://img.shields.io/codecov/c/github/ahkohd/react.svg?style=flat-square
-[codecov-url]: https://codecov.io/gh/ahkohd/react
+[codecov-url]: https://codecov.io/gh/ValencyHQ/react
 [npmv-image]: https://img.shields.io/npm/v/react.svg?style=flat-square
-[npmv-url]: https://www.npmjs.com/package/react
+[npmv-url]: https://www.npmjs.com/package/ValencyHQ/react
 [npmd-image]: https://img.shields.io/npm/dm/react.svg?style=flat-square
-[npmd-url]: https://www.npmjs.com/package/react
+[npmd-url]: https://www.npmjs.com/package/ValencyHQ/react
+
+¡
