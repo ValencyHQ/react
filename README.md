@@ -186,10 +186,12 @@ const { get, getConfig, setConfig, asset } = useValency()
 //..
 ```
 
-**Example**
+The following are functions and properties exposed by the [`useValency()`](#usevalency) hook:
 
-```jsx
-```
+- [`get()`](https://github.com/ValencyHQ/vanilla#valencygetfn): Returns a URL to the provided `assetName`. [(See documentation)](https://github.com/ValencyHQ/vanilla#valencygetfn)
+- [`getConfig()`](https://github.com/ValencyHQ/vanilla#valencygetconfigotherconfig): Returns configuration object. [(See documentation)](https://github.com/ValencyHQ/vanilla#valencygetfn)
+- [`setConfig()`](https://github.com/ValencyHQ/vanilla#valencysetconfigotherconfig): Use to globally update configuration. [(See documentation)](https://github.com/ValencyHQ/vanilla#valencysetfn)
+- [`asset`](https://github.com/ValencyHQ/vanilla#valencyget-shorthand-properties): Valency provides convenient shorthand properties to Valency.get() which provides an intuitive way to get an asset's URL. [(See documentation)](https://github.com/ValencyHQ/vanilla#valencygetfn)
 
 ## <span id="contributing">👨‍🔧 Contributing</span>
 
