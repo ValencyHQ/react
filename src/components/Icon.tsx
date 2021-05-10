@@ -1,4 +1,4 @@
-import React, { SVGAttributes, FC } from 'react'
+import React, { SVGAttributes } from 'react'
 import { ValencyConfig } from '@valencyhq/valency'
 import useValency from '../hooks/useValency'
 
@@ -8,7 +8,7 @@ export type IconProps = SVGAttributes<SVGElement> &
             color?: string
       }
 
-const Icon: FC<IconProps> = (props: IconProps) => {
+const Icon = (props: IconProps) => {
       const { get } = useValency()
       const { name, color } = props
 
