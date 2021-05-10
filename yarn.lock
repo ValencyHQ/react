@@ -1387,11 +1387,6 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@valencyhq/valency@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@valencyhq/valency/-/valency-0.1.1.tgz#4e1ea8507e53357029fb7567ce69044e88404269"
-  integrity sha512-0sOYe5dDm9BCIcjSyyOOnzeRE3oNanQoYAxY7fGlRXFEtAO0uKQgGRJDvX2FlqgWok+AjL5aS2mQqvHBC57u2w==
-
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
@@ -3151,6 +3146,11 @@ duplexify@^3.4.2, duplexify@^3.6.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
+
+easyjson@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/easyjson/-/easyjson-0.1.2.tgz#2e2be25b5bd7e99440ec3b8f5fb4735046f41994"
+  integrity sha1-LiviW1vX6ZRA7DuPX7RzUEb0GZQ=
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
