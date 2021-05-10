@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import ValencyContext from 'contexts/ValencyContext'
+import ValencyContext from '../contexts/ValencyContext'
 
 const useValency = () => {
       const valencyContext = useContext(ValencyContext)
