@@ -20,14 +20,15 @@ $ npm install @valencyhq/vanilla @valencyhq/react --save
 ## Table of Contents
 
 - [Basic Usage](#basic-usage)
+
      - [Component Usage](#components-usage)
-     - [Hooks Usage](#hooks-usage)
+
 - [Live Examples](#live-examples)
 - [API Reference](#api-reference)
-     - [`valency.get()`](#valencygetfn)
-     - [`valency.get() shorthand properties`](#valencygetshorthandpropsfn)
-     - [`valency.replace()`](#valencyreplacefn)
-     - [`valency.getConfig()`](#valencygetconfigfn)
+     - [Components](#components)
+     - [ValencyContext](#valencycontext)
+     - [Hooks](#hooks)
+          - [useValency()](#usevalency)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -122,10 +123,68 @@ render(<App />, document.getElementById('root'))
 
 ## <span id="api-reference">📖 API Reference</span>
 
-**Props**
+### Components
 
-- `foo` - Something something.
-- `bar` - _Optional_ Something something. Defaults to `null`.
+Valency provides some components:
+
+- `Image` - An `<img/>`element
+
+```jsx
+<Image name="cat-dog" width={200} height={200} />
+```
+
+- `Object` - An `<object/>` element
+
+```jsx
+<Object name="cat-dog" width={200} height={200} />
+```
+
+- `Icon` - Renders `<svg/>` as an icon
+
+```jsx
+<Icon name="like" width="40px" height="40px" color="red" stokeWidth="2px" />
+```
+
+The components above accepts the following **props** and all other valid props of the type of `HTML` element rendered by the component:
+
+- `name` - Name of asset
+- `library?` - (Optional) ID of the library to get the asset
+- `project?` - (Optional) ID of the project to get the asset
+- `uid?` - (Optional) ID of the user that the asset belongs to
+
+> If an optional prop is not provided, the corresponding default value set at the instance of [`Valency`](https://github.com/ValencyHQ/vanilla) class which is asssigned the the [ValencyContext](#valencycontext) will be used.
+
+### `ValencyContext`
+
+A context to pass [`Valency`](https://github.com/ValencyHQ/vanilla) instance through the component tree without having to pass props down manually at every level.
+
+```jsx
+import { ValencyContext } from '@valencyhq/react'
+
+const valent = new Valency({
+      uid: 'Your user ID',
+      project: 'Your default project ID',
+      library: 'Your default library ID',
+})
+
+// ...
+<ValencyContext.Provider value={valent}>
+      {/* Place components that will use ValencyContext here */}
+</ValencyContext.Provider>
+//..
+```
+
+### Hooks
+
+Valency provides <span id="usevalency">`useValency`</span> hook. This hook returns an object which exposes the methods and properties of an instance of [`Valency`](https://github.com/ValencyHQ/vanilla) object.
+
+```jsx
+import { useValency } from '@valencyhq/react'
+
+// ...
+const { get, getConfig, setConfig, asset } = useValency()
+//..
+```
 
 **Example**
 
