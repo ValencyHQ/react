@@ -1387,6 +1387,11 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
+"@valencyhq/valency@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@valencyhq/valency/-/valency-0.1.1.tgz#4e1ea8507e53357029fb7567ce69044e88404269"
+  integrity sha512-0sOYe5dDm9BCIcjSyyOOnzeRE3oNanQoYAxY7fGlRXFEtAO0uKQgGRJDvX2FlqgWok+AjL5aS2mQqvHBC57u2w==
+
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.9.0.tgz#bd850604b4042459a5a41cd7d338cbed695ed964"
