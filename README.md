@@ -204,7 +204,7 @@ React-valency is licensed under the [MIT License](https://github.com/ValencyHQ/r
 [build-image]: https://img.shields.io/github/workflow/status/ValencyHQ/react/CI?style=flat-square
 [codecov-image]: https://img.shields.io/codecov/c/github/ValencyHQ/react.svg?style=flat-square
 [codecov-url]: https://codecov.io/gh/ValencyHQ/react
-[npmv-image]: https://img.shields.io/npm/v/ValencyHQ/react.svg?style=flat-square
-[npmv-url]: https://www.npmjs.com/package/ValencyHQ/react
-[npmd-image]: https://img.shields.io/npm/dm/ValencyHQ/react.svg?style=flat-square
-[npmd-url]: https://www.npmjs.com/package/ValencyHQ/react
+[npmv-image]: https://img.shields.io/npm/v/@valencyhq/react.svg?style=flat-square
+[npmv-url]: https://www.npmjs.com/package/@valencyhq/react
+[npmd-image]: https://img.shields.io/npm/dm/@valencyhq/react.svg?style=flat-square
+[npmd-url]: https://www.npmjs.com/package/@valencyhq/react
