@@ -1,6 +1,6 @@
 import React, { SVGAttributes } from 'react'
 import { ValencyConfig } from '@valencyhq/valency'
-import useValency from '../hooks/useValency'
+import useValency from 'hooks/useValency'
 
 export type IconProps = SVGAttributes<SVGElement> &
       Partial<ValencyConfig> & {

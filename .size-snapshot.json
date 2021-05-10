@@ -1,36 +1,36 @@
 {
   "dist/react.cjs.development.js": {
-    "bundled": 368,
-    "minified": 297,
-    "gzipped": 198
+    "bundled": 433,
+    "minified": 364,
+    "gzipped": 222
   },
   "dist/react.cjs.production.js": {
-    "bundled": 368,
-    "minified": 297,
-    "gzipped": 198
+    "bundled": 433,
+    "minified": 364,
+    "gzipped": 222
   },
   "dist/react.esm.js": {
-    "bundled": 175,
-    "minified": 151,
-    "gzipped": 123,
+    "bundled": 236,
+    "minified": 208,
+    "gzipped": 146,
     "treeshaked": {
       "rollup": {
-        "code": 113,
-        "import_statements": 72
+        "code": 170,
+        "import_statements": 129
       },
       "webpack": {
-        "code": 1140
+        "code": 1263
       }
     }
   },
   "dist/react.umd.development.js": {
-    "bundled": 668,
-    "minified": 390,
-    "gzipped": 258
+    "bundled": 1096,
+    "minified": 624,
+    "gzipped": 320
   },
   "dist/react.umd.production.js": {
-    "bundled": 668,
-    "minified": 390,
-    "gzipped": 258
+    "bundled": 1096,
+    "minified": 624,
+    "gzipped": 320
   }
 }
