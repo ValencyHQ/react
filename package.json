@@ -37,7 +37,7 @@
       },
       "repository": {
             "type": "git",
-            "url": "github:ahkohd/react"
+            "url": "github:ValencyHQ/react"
       },
       "keywords": [
             "javascript",
@@ -47,9 +47,9 @@
       "author": "Victor Aremu",
       "license": "MIT",
       "bugs": {
-            "url": "github:ahkohd/react/issues"
+            "url": "github:ValencyHQ/react/issues"
       },
-      "homepage": "github:ahkohd/react",
+      "homepage": "github:ValencyHQ/react",
       "peerDependencies": {
             "@valencyhq/valency": "^0.1.1",
             "react": "^16.0.0",
