@@ -2,7 +2,7 @@
       "name": "@valencyhq/react",
       "version": "0.0.7",
       "description": "Valency is a tool to manage and serve design assets",
-      "main": "dist/index.js",
+      "main": "dist/react.umd.production.js",
       "module": "dist/react.umd.production.js",
       "jsnext:main": "dist/react.umd.production.js",
       "typings": "dist/index.d.ts",
