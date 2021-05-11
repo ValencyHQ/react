@@ -51,7 +51,7 @@
       },
       "homepage": "github:ValencyHQ/react",
       "peerDependencies": {
-            "@valencyhq/valency": "^0.1.3",
+            "@valencyhq/valency": "^0.1.8",
             "react": "^16.0.0",
             "react-dom": "^16.0.0"
       },
