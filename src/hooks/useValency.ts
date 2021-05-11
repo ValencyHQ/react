@@ -5,10 +5,10 @@ const useValency = () => {
       const valencyContext = useContext(ValencyContext)
 
       return {
-            get: valencyContext?.get,
-            getConfig: valencyContext?.getConfig,
-            setConfig: valencyContext?.setConfig,
-            asset: valencyContext?.asset,
+            get: valencyContext.get,
+            getConfig: valencyContext.getConfig,
+            setConfig: valencyContext.setConfig,
+            asset: valencyContext.asset,
       }
 }
 
