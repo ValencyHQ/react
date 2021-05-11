@@ -1,6 +1,6 @@
 import { ValencyConfig } from '@valencyhq/valency'
 import React, { ImgHTMLAttributes } from 'react'
-import useValency from '../hooks/useValency'
+import { useValency } from '../providers/ValencyProvider'
 
 export type ObjectProps = ImgHTMLAttributes<HTMLObjectElement> &
       Partial<ValencyConfig> & {
