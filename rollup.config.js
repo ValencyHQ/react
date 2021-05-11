@@ -19,6 +19,7 @@ const getGlobals = bundleType => {
       const baseGlobals = {
             'react-dom': 'ReactDOM',
             react: 'React',
+            '@valencyhq/valency': 'Valency',
       }
 
       switch (bundleType) {
