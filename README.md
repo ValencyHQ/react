@@ -26,7 +26,7 @@ $ npm install @valencyhq/valency @valencyhq/react --save
 - [Live Examples](#live-examples)
 - [API Reference](#api-reference)
      - [Components](#components)
-     - [ValencyContext](#valencycontext)
+     - [ValencyProvider](#valencyprovider)
      - [Hooks](#hooks)
           - [useValency()](#usevalency)
 - [Contributing](#contributing)
@@ -40,7 +40,7 @@ $ npm install @valencyhq/valency @valencyhq/react --save
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
 import Valency from '@valencyhq/valency'
-import { ValencyContext, Image, Object, Icon } from '@valencyhq/react'
+import { ValencyProvider, Image, Object, Icon } from '@valencyhq/react'
 
 const valent = new Valency({
       uid: 'Your user ID',
@@ -50,10 +50,10 @@ const valent = new Valency({
 
 const App = () => {
       return (
-            <ValencyContext.Provider value={valent}>
+            <ValencyProvider value={valent}>
                   {/* Your other components wrapped */}
                   <ExampleBasicUsage />
-            </ValencyContext.Provider>
+            </ValencyProvider>
       )
 }
 
@@ -76,7 +76,7 @@ render(<App />, document.getElementById('root'))
 import React, { useEffect } from 'react'
 import { render } from 'react-dom'
 import Valency from '@valencyhq/valency'
-import { ValencyContext, Image, Object, Icon } from '@valencyhq/react'
+import { ValencyProvider, Image, Object, Icon } from '@valencyhq/react'
 
 const valent = new Valency({
       uid: 'Your user ID',
@@ -86,10 +86,10 @@ const valent = new Valency({
 
 const App = () => {
       return (
-            <ValencyContext.Provider value={valent}>
+            <ValencyProvider value={valent}>
                   {/* Your other components wrapped */}
                   <ExampleHooksUsage />
-            </ValencyContext.Provider>
+            </ValencyProvider>
       )
 }
 
@@ -152,14 +152,14 @@ The components above accepts the following **props** and all other valid props o
 - `project?` - (Optional) ID of the project to get the asset
 - `uid?` - (Optional) ID of the user that the asset belongs to
 
-> If an optional prop is not provided, the corresponding default value set at the instance of [`Valency`](https://github.com/ValencyHQ/vanilla) class which is asssigned the the [ValencyContext](#valencycontext) will be used.
+> If an optional prop is not provided, the corresponding default value set at the instance of [`Valency`](https://github.com/ValencyHQ/vanilla) class which is asssigned the the [ValencyProvider](#valencyprovider) will be used.
 
-### `ValencyContext`
+### `ValencyProvider`
 
-A context to pass [`Valency`](https://github.com/ValencyHQ/vanilla) instance through the component tree without having to pass props down manually at every level.
+A provider that will pass the provided instance of [`Valency`](https://github.com/ValencyHQ/vanilla) through the component tree without having to pass props down manually at every level.
 
 ```jsx
-import { ValencyContext } from '@valencyhq/react'
+import { ValencyProvider } from '@valencyhq/react'
 
 const valent = new Valency({
       uid: 'Your user ID',
@@ -168,15 +168,17 @@ const valent = new Valency({
 })
 
 // ...
-<ValencyContext.Provider value={valent}>
-      {/* Place components that will use ValencyContext here */}
-</ValencyContext.Provider>
+<ValencyProvider value={valent}>
+      {/* Place components that will use valency here */}
+</ValencyProvider>
 //..
 ```
 
 ### Hooks
 
-Valency provides <span id="usevalency">`useValency`</span> hook. This hook returns an object which exposes the methods and properties of an instance of [`Valency`](https://github.com/ValencyHQ/vanilla) object.
+### <span id="usevalency">`useValency()`</span>
+
+<span id="usevalency">`useValency`</span> hook provides a set of APIs.
 
 ```jsx
 import { useValency } from '@valencyhq/react'
@@ -196,6 +198,7 @@ The following are functions and properties exposed by the [`useValency()`](#usev
 ## <span id="contributing">👨‍🔧 Contributing</span>
 
 For more info on how to contribute please see the [contribution guidelines](./CONTRIBUTING.md).
+Caught a mistake or want to contribute to the documentation? [Edit this page on Github](./README.md)
 
 ## <span id="license">🧾 License</span>
 
