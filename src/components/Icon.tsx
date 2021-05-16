@@ -21,16 +21,21 @@ const Icon = (props: IconProps) => {
       useEffect(() => {
             if (document.getElementById(`icons_${config.library}`)) return
 
-            const iconUrl = get('__icons__.svg', config)
+            const iconUrl =
+                  'https://cors-anywhere.ahkohd.workers.dev/?' +
+                  get('__icons__.svg', config)
 
             const request = new XMLHttpRequest()
             request.open('GET', iconUrl, true)
             request.send()
             request.onload = () => {
                   const div = document.createElement('div')
-                  div.classList.add('valency__sprite_icon')
                   div.innerHTML = request.responseText
-                  document.body.insertBefore(div, document.body.childNodes[0])
+
+                  document.body.insertBefore(
+                        div.childNodes[0],
+                        document.body.childNodes[0]
+                  )
             }
 
             // eslint-disable-next-line react-hooks/exhaustive-deps
