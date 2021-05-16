@@ -1371,10 +1371,10 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
-"@valencyhq/valency@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@valencyhq/valency/-/valency-0.1.8.tgz#359d31153e8805d8bc392b56f04ab79d359f2cb8"
-  integrity sha512-D3G6b6QTvqfTQ/wfO4kAVRQ+NAjGJwu09fYCX/pgOw8MrzKTYI10wJWSd1fqrWKhk2ToIo/utU6aXaQ6//zMzw==
+"@valencyhq/valency@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@valencyhq/valency/-/valency-0.1.11.tgz#62cb38527eeb6a68da45ddc580c9a71ff6d0bef1"
+  integrity sha512-6rGo3fqJKYCaacrST2XqJMyXKIf/VisYcoEaAqiu9u1HXoQP3ahD9JRRDpfM0IVXjT2gInRQagTtzcrw3Kv8sA==
 
 "@webassemblyjs/ast@1.9.0":
   version "1.9.0"
