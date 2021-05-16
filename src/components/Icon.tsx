@@ -23,22 +23,15 @@ const Icon = (props: IconProps) => {
 
             const iconUrl = get('__icons__.svg', config)
 
-            console.log('test', iconUrl)
-
-            fetch(iconUrl, {
-                  mode: 'no-cors',
-            })
-                  .then(r => r.text())
-                  .then(svg => {
-                        const div = document.createElement('div')
-                        div.innerHTML = svg
-                        div.classList.add('valency__sprite_icon')
-                        document.body.insertBefore(
-                              div,
-                              document.body.childNodes[0]
-                        )
-                  })
-                  .catch(console.error.bind(console))
+            const request = new XMLHttpRequest()
+            request.open('GET', iconUrl, true)
+            request.send()
+            request.onload = () => {
+                  const div = document.createElement('div')
+                  div.classList.add('valency__sprite_icon')
+                  div.innerHTML = request.responseText
+                  document.body.insertBefore(div, document.body.childNodes[0])
+            }
 
             // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [config])
