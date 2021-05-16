@@ -33,7 +33,10 @@ const Icon = (props: IconProps) => {
                         const div = document.createElement('div')
                         div.innerHTML = svg
                         div.classList.add('valency__sprite_icon')
-                        document.append(div)
+                        document.body.insertBefore(
+                              div,
+                              document.body.childNodes[0]
+                        )
                   })
                   .catch(console.error.bind(console))
 
