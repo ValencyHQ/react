@@ -9,7 +9,7 @@ export type IconProps = SVGAttributes<SVGElement> &
       }
 
 const Icon = (props: IconProps) => {
-      const { get, getConfig } = useValency()
+      const { getConfig, loadSprite } = useValency()
       const { name, color, uid, project, library } = props
 
       const config = getConfig({
@@ -19,25 +19,7 @@ const Icon = (props: IconProps) => {
       })
 
       useEffect(() => {
-            if (document.getElementById(`icons_${config.library}`)) return
-
-            const iconUrl =
-                  'https://cors-anywhere.ahkohd.workers.dev/?' +
-                  get('__icons__.svg', config)
-
-            const request = new XMLHttpRequest()
-            request.open('GET', iconUrl, true)
-            request.send()
-            request.onload = () => {
-                  const div = document.createElement('div')
-                  div.innerHTML = request.responseText
-
-                  document.body.insertBefore(
-                        div.childNodes[0],
-                        document.body.childNodes[0]
-                  )
-            }
-
+            loadSprite(config)
             // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [config])
 
