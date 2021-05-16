@@ -1,6 +1,6 @@
 {
       "name": "@valencyhq/react",
-      "version": "0.0.17",
+      "version": "0.0.18",
       "description": "Valency is a tool to manage and serve design assets",
       "main": "dist/index.js",
       "module": "dist/react.esm.js",
