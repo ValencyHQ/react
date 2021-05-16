@@ -19,6 +19,9 @@ export const useValency = () => {
             setConfig(otherConfig: Partial<ValencyConfig>) {
                   valency.setConfig(otherConfig)
             },
+            loadSprite(otherConfig?: Partial<ValencyConfig> | undefined) {
+                  valency.loadSprite(otherConfig)
+            },
             asset: valency.asset,
       }
 }
