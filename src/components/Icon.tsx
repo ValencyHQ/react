@@ -25,7 +25,9 @@ const Icon = (props: IconProps) => {
 
             console.log('test', iconUrl)
 
-            fetch(iconUrl)
+            fetch(iconUrl, {
+                  mode: 'no-cors',
+            })
                   .then(r => r.text())
                   .then(svg => {
                         const div = document.createElement('div')
